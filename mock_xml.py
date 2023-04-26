@@ -52,8 +52,8 @@ def xml():
 
             # Обработка данных и формирование XML-документа
             response = ET.Element("root")  # создается корневой элемент "root".
-            clientinfo_elem = ET.SubElement(response, "clientInfo")
-            ET.SubElement(clientinfo_elem, "clientCode").text = clientcode # Далее элементы помещаются внутрь этого тега по переменной
+            clientinfo_elem = ET.SubElement(response, "clientInfo") # Далее элементы помещаются внутрь этого тега по переменной
+            ET.SubElement(clientinfo_elem, "clientCode").text = clientcode 
             ET.SubElement(clientinfo_elem, "cardNumber").text = str(
                 random.randint(10 ** 15, 10 ** 16 - 1)) # Таким образом рандомизируется 16-ти значное число
             ET.SubElement(clientinfo_elem, "balance").text = str(random.randrange(1000, 9999))
