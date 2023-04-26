@@ -25,7 +25,7 @@ def xml():
 
             # Обработка данных и формирование XML-документа
             response = ET.Element("root")  # создается корневой элемент "root".
-            productinfo_elem = ET.SubElement(response, "productInfo") # Далее элементы помещаются внутрь этого тега по переменной
+            productinfo_elem = ET.SubElement(response, "productInfo")  # Далее элементы помещаются внутрь этого тега по переменной
             ET.SubElement(productinfo_elem, "productCode").text = productcode
             ET.SubElement(productinfo_elem, "count").text = str(random.randrange(10, 99))
             ET.SubElement(productinfo_elem, "price").text = str(random.randrange(100, 999))
